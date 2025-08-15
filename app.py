@@ -18,7 +18,7 @@ cities = ['Hyderabad', 'Bangalore', 'Mumbai', 'Indore', 'Kolkata', 'Delhi',
        'Visakhapatnam', 'Pune', 'Raipur', 'Ranchi', 'Abu Dhabi',
        'Sharjah','Mohali', 'Bengaluru']
 
-pipe=pickle.load(open('pipe.pkl','rb'))
+pipe=pickle.load(open('project-1/pipe.pkl','rb'))
 
 st.title('IPL Prediction')
 
@@ -68,6 +68,7 @@ if st.button('Predict Probability'):
     st.write(bowling_team + "=" + str(round(loss*100)) + "%")
 
     
+
 
 
 
