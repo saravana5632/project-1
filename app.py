@@ -1,6 +1,7 @@
 import pandas as pd
 import streamlit as st
-import pickle
+from sklearn.pipeline import Pipeline
+
 teams=['Sunrisers Hyderabad',
          'Mumbai Indians',
          'Royal Challengers Bangalore',
@@ -67,6 +68,7 @@ if st.button('Predict Probability'):
     st.write(bowling_team + "=" + str(round(loss*100)) + "%")
 
     
+
 
 
 
