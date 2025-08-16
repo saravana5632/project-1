@@ -3,6 +3,17 @@ import pandas as pd
 import streamlit as st
 from sklearn.pipeline import Pipeline
 
+
+teams1=['Rajasthan Royals',
+ 'Kings XI Punjab',
+ 'Sunrisers Hyderabad',
+ 'Delhi Capitals',
+ 'Mumbai Indians',
+ 'Kolkata Knight Riders',
+ 'Royal Challengers Bangalore',
+ 'Chennai Super Kings']
+
+
 teams=['Sunrisers Hyderabad',
          'Mumbai Indians',
          'Royal Challengers Bangalore',
@@ -28,7 +39,7 @@ col1 , col2=st.columns(2)
 with col1:
     batting_team = st.selectbox('Select the Batting Team',teams)
 with col2:
-     bowling_team = st.selectbox('Select the Bowling Team',teams)
+     bowling_team = st.selectbox('Select the Bowling Team',teams1)
 
 selected_city= st.selectbox('Select Host City',(cities))
 
@@ -69,6 +80,7 @@ if st.button('Predict Probability'):
     st.write(bowling_team + "=" + str(round(loss*100)) + "%")
 
     
+
 
 
 
